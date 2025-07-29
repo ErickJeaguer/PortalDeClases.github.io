@@ -100,11 +100,39 @@
         }
 
         .grades-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 1.5rem;
+}
+
+.grade-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.grade-card label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.grade-card input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
 
         .grade-input {
             text-align: center;
@@ -253,27 +281,27 @@
                     <input type="text" id="studentId" name="studentId" maxlength="10" required>
                 </div>
                 
-                <div class="form-group">
+                 <div class="form-group">
                     <label>Calificaciones (1-10):</label>
                     <div class="grades-grid">
                         <div>
-                            <label for="grade1" style="font-size: 0.9rem;">Historia</label>
+                            <label for="grade1" style="font-size: 0.9rem;">         Historia</label>
                             <input type="number" id="grade1" class="grade-input" min="1" max="10" step="0.1" required>
                         </div>
                         <div>
-                            <label for="grade2" style="font-size: 0.9rem;">Lenguaje</label>
+                            <label for="grade2" style="font-size: 0.9rem;">Lengua y literatura</label>
                             <input type="number" id="grade2" class="grade-input" min="1" max="10" step="0.1" required>
                         </div>
                         <div>
-                            <label for="grade3" style="font-size: 0.9rem;">Matematicas</label>
+                            <label for="grade3" style="font-size: 0.9rem;">          Matematicas</label>
                             <input type="number" id="grade3" class="grade-input" min="1" max="10" step="0.1" required>
                         </div>
                         <div>
-                            <label for="grade4" style="font-size: 0.9rem;">Ciencias</label>
+                            <label for="grade4" style="font-size: 0.9rem;">Ciencias Naturales</label>
                             <input type="number" id="grade4" class="grade-input" min="1" max="10" step="0.1" required>
                         </div>
                         <div>
-                            <label for="grade5" style="font-size: 0.9rem;">Eduacacion fisica</label>
+                            <label for="grade5" style="font-size: 0.9rem;">Educacion fisica</label>
                             <input type="number" id="grade5" class="grade-input" min="1" max="10" step="0.1" required>
                         </div>
                     </div>
@@ -283,7 +311,7 @@
             </form>
         </div>
 
-        <!-- Resultados -->
+       
         <div class="card">
             <h2>📊 Resumen de Calificaciones</h2>
             <p style="color: #666; margin-bottom: 2rem;">Visualiza los resultados calculados y el estado del estudiante</p>
@@ -419,3 +447,4 @@
     </script>
 </body>
 </html>
+
